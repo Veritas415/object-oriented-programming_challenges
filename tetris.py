@@ -15,6 +15,7 @@ In Tetris, really the only object is a Tetromino. It has states of:
         * moving (sideways)
         * rotating
 """
+import math
 
 class Tetronimo:
 
@@ -22,3 +23,11 @@ class Tetronimo:
         self.rotation = rotation
         self.shape = shape
         self.color = color
+
+class Shape:
+
+    def __init__(self, length, width):
+        self.length = length
+        self.width = width
+
+print(math.floor(1.22))
