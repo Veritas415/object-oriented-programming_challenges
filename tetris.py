@@ -15,19 +15,53 @@ In Tetris, really the only object is a Tetromino. It has states of:
         * moving (sideways)
         * rotating
 """
-import math
 
 class Tetronimo:
 
-    def __init__(self, rotation, shape, color):
+    def __init__(self, rotation, shape, color, coordinates, isFalling):
         self.rotation = rotation
         self.shape = shape
         self.color = color
+        self.coordinates = coordinates
+        self.isFalling = isFalling
 
-class Shape:
+    def getRotation(self):
+        """Get the Tetronimo current 'rotation' value"""
+        return self.rotation
 
-    def __init__(self, length, width):
-        self.length = length
-        self.width = width
+    def setRotation(self, value):
+        self.rotation = value
 
-print(math.floor(1.22))
+    def getShape(self):
+        """Get the Tetronimo 'shape' value"""
+        return self.shape
+
+    def setShape(self, value):
+        self.shape = value
+
+    def getColor(self):
+        """Get the Tetronimo 'color' value"""
+        return self.color
+
+    def setColor(self, value):
+        self.color = value
+
+    def getCoordinates(self):
+        """Get The Tetronimo 'coordinates' value"""
+        return self.coordinates
+
+    def setCoordinates(self, value):
+        self.coordinates = value
+
+    def getIsFalling(self):
+        """Get the Tetronimo 'isFalling' value"""
+        return self.isFalling
+
+    def fall(self):
+        """Decrement the y coordinate of a Tetronimo's position while it is falling"""
+        while self.isFalling:
+            self.coordinates[1] -- 1
+
+    def land(self):
+        """Assign a Tetronimo's isFalling value to False"""
+        self.isFalling = False

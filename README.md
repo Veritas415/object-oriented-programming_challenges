@@ -2,6 +2,6 @@
 
 This repo consists of a set of challenges to solve using object oriented programming.
 
-Click on one of the challenge titles below, and follow the instructions in the comments to complete the challenge.
+Click on one of the challenge titles below, and follow the instructions in the comments at the top of the file to complete the challenge.
 
-[Tetris Challenge](tetris.py)
+## [Tetris Challenge](tetris.py)
