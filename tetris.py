@@ -16,9 +16,13 @@ In Tetris, really the only object is a Tetromino. It has states of:
         * rotating
 """
 import time
-import art
 
-class Tetronimo:
+class Shape:
+
+    def __init__(self, borders):
+        self.borders = borders
+
+class Tetromino:
 
     def __init__(self, rotation, shape, color, coordinates, isFalling):
         self.rotation = rotation
@@ -28,49 +32,43 @@ class Tetronimo:
         self.isFalling = isFalling
 
     def getRotation(self):
-        """Get the Tetronimo current 'rotation' value"""
+        """Get the Tetromino current 'rotation' value"""
         return self.rotation
 
     def setRotation(self, value):
         self.rotation = value
 
     def getShape(self):
-        """Get the Tetronimo 'shape' value"""
+        """Get the Tetromino 'shape' value"""
         return self.shape
 
     def setShape(self, value):
         self.shape = value
 
     def getColor(self):
-        """Get the Tetronimo 'color' value"""
+        """Get the Tetromino 'color' value"""
         return self.color
 
     def setColor(self, value):
         self.color = value
 
     def getCoordinates(self):
-        """Get The Tetronimo 'coordinates' value"""
+        """Get The Tetromino 'coordinates' value"""
         return self.coordinates
 
     def setCoordinates(self, value):
         self.coordinates = value
 
     def getIsFalling(self):
-        """Get the Tetronimo 'isFalling' value"""
+        """Get the Tetromino 'isFalling' value"""
         return self.isFalling
 
     def fall(self):
-        """Decrement the y coordinate of a Tetronimo's position while it is falling"""
+        """Decrement the y coordinate of a Tetromino's position while it is falling"""
         while self.isFalling:
             time.sleep(.25)
             self.coordinates[1] -- 1
 
     def land(self):
-        """Assign a Tetronimo's isFalling value to False"""
+        """Assign a Tetromino's isFalling value to False"""
         self.isFalling = False
-
-c = Tetronimo(0, "square", "yellow", [0,0], True)
-
-print(c.getIsFalling())
-c.land()
-print(c.getIsFalling())

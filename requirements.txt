@@ -1,5 +1,2 @@
-#
-####### requirements.txt #######
-#
-###### Requirements without Version Specifiers ######
-art
+art==4.1
+coverage==4.5.4
