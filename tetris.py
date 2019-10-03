@@ -14,6 +14,10 @@ In Tetris, really the only object is a Tetromino. It has states of:
         * falling
         * moving (sideways)
         * rotating
+
+Design a set of classes corresponding to the different objects in a game of Tetris.
+
+Use UML diagrams to design the relationships between the different classes.
 """
 
 class Tetromino:
