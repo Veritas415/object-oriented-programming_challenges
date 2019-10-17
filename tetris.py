@@ -20,6 +20,23 @@ Design a set of classes corresponding to the different objects in a game of Tetr
 Use UML diagrams to design the relationships between the different classes.
 """
 
+
+arrayX = []
+arrayY = []
+
+for i in range(9):
+  arrayX.append(0)
+
+for n in range(19):
+  arrayY.append(arrayX)
+
+#print(arrayX)
+for j in range(19):
+  print("%s" % arrayY[j])
+
+
+
+
 class Tetromino:
 
     def __init__(self, rotation, shape, color, coordinates, isFalling):
@@ -28,3 +45,4 @@ class Tetromino:
         self.color = color
         self.coordinates = coordinates
         self.isFalling = isFalling
+
